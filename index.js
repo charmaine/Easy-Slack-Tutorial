@@ -15,6 +15,7 @@ app.listen(process.env.PORT || PORT, function() {
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
 app.post('/', (req, res) => {
   var data = {form: {
     token: process.env.SLACK_AUTH_TOKEN,
